@@ -1,0 +1,20 @@
+<h1>Orders#index</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Note</th>
+      <th>Simple formatted raw data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.id %></td>
+        <td><%= simple_format(order.note) %></td>
+        <td><%= simple_format(order.to_json.to_s.gsub(/\,/, "\n")) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

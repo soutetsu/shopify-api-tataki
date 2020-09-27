@@ -1,18 +1,6 @@
 <h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-
-<hr>
 
 <ul>
-  <li>ID : <%= @product.id %></li>
-  <li>Title : <%= @product.title %></li>
-  <li>Variants count : <%= @product.variants.count %></li>
-  <ol>
-    <% @product.variants.each do |variant| %>
-      <li>Variant ID : <%= variant.id %></li>
-      <ul>
-        <li>Title : <%= variant.title %></li>
-      </ul>
-    <% end %>
-  </ol>
+  <li><%= link_to '商品', products_path %></li>
+  <li><%= link_to '注文', orders_path %></li>
 </ul>
