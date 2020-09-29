@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <header>
+      <a href="<%= "https://#{ENV['SHOPIFY_DOMAIN']}/admin" %>" target="_blank"><%= ENV['SHOPIFY_DOMAIN'] %></a>
+    </header>
+
     <%= yield %>
+
   </body>
 </html>
